@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/camera-shutter-pentax-k20d-38609.mp3-816108b5be800e58ea1af0a8cff93ee3.mp3str"
+
+[deps]
+
+source_file="res://camera-shutter-pentax-k20d-38609.mp3"
+dest_files=[ "res://.import/camera-shutter-pentax-k20d-38609.mp3-816108b5be800e58ea1af0a8cff93ee3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

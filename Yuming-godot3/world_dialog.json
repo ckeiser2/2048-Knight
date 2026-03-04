@@ -1,0 +1,18 @@
+{
+    "player": [
+        "Welcome to 2048 Knight! Use the WASD Keys to move",
+        "Please note this is a work in progress...",
+        "Please stop spamming the space bar"
+    ],
+    "blacksmith": [
+        "[Blacksmith]: Welcome knight... how our kingdom has fallen",
+        "[Blacksmith]: How have our own heroes foresaken us?"
+    ],
+    "torch": [
+        "The warmth of the flames has restored your health"
+    ],
+    "chest": [
+        "You opened a chest!"
+    ]
+
+}

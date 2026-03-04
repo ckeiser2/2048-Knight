@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lost in the Unknown.mp3-345a6d057a0b4aea2f25d78634ffd3df.mp3str"
+
+[deps]
+
+source_file="res://Lost in the Unknown.mp3"
+dest_files=[ "res://.import/Lost in the Unknown.mp3-345a6d057a0b4aea2f25d78634ffd3df.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

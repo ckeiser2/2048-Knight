@@ -1,0 +1,138 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://DialoguePlayer.gd" type="Script" id=1]
+[ext_resource path="res://Assets/eight-bit-dragon-font/EightBitDragon-anqx.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SignalBus.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.00113895, 0.0284738 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="Gradient" id=4]
+
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 4 )
+width = 600
+height = 1000
+fill_from = Vector2( 1, 0 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "AnimateText"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "AnimateText"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+pause_mode = 2
+offset = Vector2( -900, -500 )
+transform = Transform2D( 1, 0, 0, 1, -900, -500 )
+script = ExtResource( 1 )
+scene_text_file = "res://world_dialog.json"
+
+[node name="WhiteOutline" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = -12.0
+margin_top = -14.0
+margin_right = 614.0
+margin_bottom = 1016.0
+texture = SubResource( 6 )
+expand = true
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 600.0
+margin_bottom = 1000.0
+texture = SubResource( 3 )
+
+[node name="MainBattleLabel" type="Label" parent="."]
+pause_mode = 2
+margin_left = 32.0
+margin_top = 54.0
+margin_right = 561.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainBattleLabel"]
+anims/AnimateText = SubResource( 7 )
+anims/RESET = SubResource( 8 )
+
+[node name="SecondaryLabel" type="Label" parent="."]
+pause_mode = 2
+margin_left = 32.0
+margin_top = 54.0
+margin_right = 561.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SecondaryLabel"]
+anims/AnimateText = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 3 )
